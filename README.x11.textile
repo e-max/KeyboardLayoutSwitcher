@@ -1,0 +1,6 @@
+h1. Keyboard Layout Switcher for X11
+
+1. Compile KeyboardLayoutSwitcher binary with:
+   gcc -L/usr/include/X11 -lX11 -o bin/KeyboardLayoutSwitcher src/xkbswitchlang.c
+2. Read README.textile
+
