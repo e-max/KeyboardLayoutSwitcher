@@ -17,6 +17,8 @@ if !exists("g:kls_focusSwitching")
     let g:kls_focusSwitching = 1 " Enabled
 endif
 
+if exists("g:kls_enabled")
+
 python << EOF
 
 import vim
@@ -45,6 +47,8 @@ def set_default():
 EOF
 " Events
 
+
+
 if g:kls_focusSwitching != 0
     autocmd! FocusLost
     autocmd FocusLost  * python save()
@@ -63,3 +67,4 @@ autocmd InsertEnter * python restore()
 "noremap : :silent call g:KLS.SwitchToDefaultInputSource()<CR>:
 "noremap <silent> <Esc><Esc> :silent call g:KLS.SwitchToDefaultInputSource()<Esc><Esc>
 
+endif
