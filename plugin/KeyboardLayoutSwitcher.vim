@@ -17,7 +17,7 @@ if !exists("g:kls_focusSwitching")
     let g:kls_focusSwitching = 1 " Enabled
 endif
 
-if exists("g:kls_enabled")
+if $DISPLAY !=""
 
 python << EOF
 
